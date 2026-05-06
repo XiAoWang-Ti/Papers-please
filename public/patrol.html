@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/interface.css">
+    <link rel="stylesheet" href="css/fontELement.css">
+    <link rel="icon" type="image/x-icon" href="../assets/icon.ico">
+    <title>Nov.23th</title>
+</head>
+<body>
+    <main>
+        
+        <div id="checkpoint">
+            <img id="checkpoint-sprite" src="../assets/others/CheckpointBack.png" preload="auto" alt="background-sprite">
+            <div id="outerBooth" class="image-container">
+                <div class="pop-up f-default">Next !</div>
+                <div class="hitbox"></div>
+                <img id="outerBooth-sprite" src="../assets/others/OuterBoothDef.png" alt="sprite" loading="lazy">
+            </div>
+            <canvas>
+
+            </canvas>
+        </div>
+        <div id="desk"> 
+            <div id="intro">
+                <div id="intro-text" class=""></div>
+            </div>
+            <div class="speech-bubble"></div>
+            <img id="control-center" src="../assets/others/Desk.png" alt="background-sprite"></img>
+            <div id="desk-facecheck-container">
+
+                <img id="shutterSwitch" class="interactable" src="../assets/others/ShutterSwitchDown.png" alt="sprite"></img>
+                <img id="shutter" src="../assets/others/Shutter.png" alt="background-sprite"></img>
+                <img id="boothWall" src="../assets/others/BoothWall.png" alt="background-sprite"></img>
+
+                <div id="console-wrapper">
+
+                    <div id="console">
+                        <img id="console-sprite" src="../assets/others/Console.png" alt="background-sprite"><img>
+                        <div id="papers" class="dragbox">
+                            <div id="drop-zone"></div>
+                            <img class="passport" src="../assets/papers/ObristanPassport.png" alt="sprite" style="display: non; bottom: 0; left: 80px; position: absolute;"></img>
+                        </div>
+            
+                        <div id="bulletinWrapper">
+                            <div id="bulletinContainer">
+                                <img id="bulletin" class="interactable" src="../assets/papers/BulletinOuter.png" alt="sprite">
+                            </div>
+                        </div>
+                        <div id="audio-log">
+                            <img id="transcript" src="../assets/papers/TranscriptOuter.png" alt="sprite">
+                        </div>
+                        <div id="transcript-hitbox" class="hitbox"></div>
+                        <img id="consoleBolt" src="../assets/others/ConsoleBolt.png">
+                        <div id="ruleBookWrapper">
+                            <div id="ruleBookContainer">
+                                <img id="ruleBook" class="interactable" src="../assets/papers/RulesOuter.png" alt="sprite"></img>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="desk-documents-container">
+                <div id="stamp">
+                    <div id="oppen" class="interactable"></div>
+                    <div id="deniedStamp" class="stamp">
+                        <div class="sprite">
+                            <img class="stampTop interactable" src="../assets/others/StampTop.png" alt="sprite"></img>
+                            <img id="stampBotDenied" class="interactable" src="../assets/others/StampBotDenied.png" alt="sprite"></img>
+                        </div>
+                    </div>
+                    <div id="aprovedStamp" class="stamp">
+                        <div class="sprite">
+                            <img class="stampTop interactable" src="../assets/others/StampTop.png" alt="sprite"></img>
+                            <img id="stampBotAproved" class="interactable" src="../assets/others/StampBotApproved.png" alt="sprite"></img>
+                        </div>
+                    </div>
+                    <div id="stampBarTop"><img src="../assets/others/StampBarTop.png" preload="auto" alt="background-sprite"></img></div>
+                    <div id="stampBarMid"><img src="../assets/others/StampBarMid.png" preload="auto" alt="background-sprite"></img></div>
+                    <div id="stampBarBot"><img src="../assets/others/StampBarBot.png" preload="auto" alt="background-sprite"></img></div>
+                </div>
+                <div id="bulletinInnerWrapper"></div>
+                <div id="rulesInnerWrapper"></div>
+            </div>
+        </div>
+        <img id="inspectButton" class="open interactable" src="../assets/others/InspectButtonOpen.png" alt="sprite"></img>
+    </main>
+    <script src="../code/init.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+@import url(./font.css);
+/* menu */
+
+#option {
+    font-family: BM Germar;
+}
+#ref, #version {
+    font-family: BM Mini;
+}
+#Menu, #transitionBoard {
+    font-family: pixelplay;
+}
+
+/* settings */
+#settings {
+    font-family: pixelplay !important;
+}
+
+/* selection board */
+#header {
+    font-family: pixelplay;
+}
+
+#plays .exit > span {
+    font-family: BM Germar;
+}
+
+/* in-game*/
+#intro-text,
+.passport.Arstotzka,
+.passport.Obristan,
+.bulletin {
+    font-family: pixelplay;
+}
+.speech-bubble {
+    font-family: AtariSmall;
+}
+.passport.ui {
+    font-family: 53Veda;
+}

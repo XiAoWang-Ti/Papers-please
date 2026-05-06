@@ -1,0 +1,22 @@
+@keyframes stampBarOpen {
+    0% {
+        transform: translateX(270px);
+    }
+    45%, 100% {
+        transform: translateX(0px);
+    }
+    68.25% {
+        transform: translateX(26px);
+    }
+}
+@keyframes stampBarClose {
+    0% {
+        transform: translateX(0px);
+    } 
+    65% { 
+        transform: translateX(258px);
+    }
+    40%, 100% {
+        transform: translateX(270px);
+    }   
+}

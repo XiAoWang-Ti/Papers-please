@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/setting.css">
+    <link rel="stylesheet" href="css/fontELement.css">
+    <link rel="icon" type="image/x-icon" href="../assets/icon.ico">
+
+    <style>
+        .type-select {
+            background-position: 0 0px;
+        }
+        .type-select.on {
+            background-image: url('../assets/others/SettingButtonOn.png');
+        }
+        .type-select.off {
+            background-image: url('../assets/others/SettingButtonOff.png');
+        }
+        .type-select.off.clicked,
+        .type-select.on.clicked {
+            background-position: 0 15px;
+        }
+    </style>
+    <title>Setting</title>
+</head> 
+<body>
+    <main>
+        <section id="settings" class="front">
+            <div id="setting-header-wrapper">
+                <a href="" id="webpage-link"><img src="../assets/others/WebpageButton.png" alt="link" class="interactable"></a>
+                <div id="setting-header">   
+                    <img src="../assets/others/ScreenHeader.png" alt="header">
+                    <span>SETTINGS</span>
+                </div>
+            
+                <a href="" id="X-link"><img src="../assets/others/TwitterButton.png" alt="link" class="interactable"></a>
+            </div>
+            <div id="setting-options">
+                <div id="fullscreen" class="setting-option">
+                    <span>Fullscreen</span>
+                    <div class="type-select off interactable">
+                        <!-- <img src="../assets/others/SettingButtonOff.png"> -->
+                    </div>
+                </div>
+                <div id="nudity" class="setting-option">
+                    <span>Nudity</span>
+                    <div class="type-select on interactable">
+                        <!-- <img src="../assets/others/SettingButtonOff.png"> -->
+                    </div>
+                </div>
+                <div id="easyMode" class="setting-option">
+                    <span>Easy Mode</span>
+                    <div class="type-select off interactable">
+                        <!-- <img src="../assets/others/SettingButtonOff.png"> -->
+                    </div>
+                </div>
+                <div id="date" class="setting-option">
+                    <span>Date Format</span>
+                    <div class="type-text">
+                        <span>1982-1-23</span>
+                        <div class="minus-plus">
+                            <img src="../assets/others/SettingButtonMinus.png" class="interactable">
+                            <img src="../assets/others/SettingButtonPlus.png" class="interactable">
+                        </div>
+                    </div>
+                </div>
+                <div id="music" class="setting-option">
+                    <span>Music</span>
+                    <div class="type-audio">
+                        <div class="type-audio">
+                            <div class="audio-bar">
+                                <img src="../assets/others/SettingsBar.png">
+                            </div>
+                            <div class="minus-plus">
+                                <img src="../assets/others/SettingButtonMinus.png" class="interactable">
+                                <img src="../assets/others/SettingButtonPlus.png" class="interactable">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sound" class="setting-option">
+                    <span>Sound</span>
+                    <div class="type-audio">
+                        <div class="audio-bar">
+                            <img src="../assets/others/SettingsBar.png">
+                        </div>
+                        <div class="minus-plus">
+                            <img src="../assets/others/SettingButtonMinus.png" class="interactable">
+                            <img src="../assets/others/SettingButtonPlus.png" class="interactable">
+                        </div>
+                    </div>
+                </div>
+                <div id="language" class="setting-option">
+                    <span>Language</span>
+                    <div class="type-text">
+                        <span>ENGLISH</span>
+                        <div class="minus-plus">
+                            <img src="../assets/others/SettingButtonMinus.png" class="interactable">
+                            <img src="../assets/others/SettingButtonPlus.png" class="interactable">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="exit">
+                <img src="../assets/others/PushButton.png" alt="button">
+                <span class="interactable">DONE</span>
+            </div>
+            
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,98 @@
+@import url(./font.css);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: url('../../assets/others/CursorArrow.png'), auto;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Standard syntax */
+    
+    image-rendering: pixelated;
+}
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* zoom: 1.82; */
+    zoom: 2;
+    overflow-Y: hidden;
+}
+body {
+    background-color: black;
+}
+
+main {
+    position: relative;
+    height: 320px;
+    width: 570px;
+    margin-top: 3px;
+    overflow: hidden;
+}
+main > section {
+    width: 100%;
+    height: 100%;
+}
+main > section:not(.front, #transitionBoard) {
+    display: none !important;
+    pointer-events: none !important;
+}
+
+.interactable:hover, 
+.hitbox:hover,
+.passport:hover {
+    cursor: url('../../assets/others/CursorHand.png'), auto !important;
+}
+audio, .sfx, .theme {
+    top: -50px;
+    left: -50px;
+    position: fixed;
+    display: none;
+    visibility: hidden;
+    width: 0px !important;
+    height: 0px !important;
+    z-index: -9999;
+}
+img:not(.dragable) {
+    image-rendering: pixelated;
+    -webkit-user-drag: none; 
+    user-drag: none; 
+}
+
+.exit {
+    width: 129px;
+    height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #556855;
+    overflow: hidden;
+    position: relative;
+}
+
+#play-record .exit > span,
+.exit > span {
+    z-index: 2;
+    font-size: 16px;
+}
+#settings > .exit > span {
+    height: 24px;
+}
+
+.exit > img {
+    object-fit: cover;
+    object-position: 0 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.exit.clicked {
+    color: black;
+}
+
+.exit.clicked > img {
+    object-position: 0 -19px;
+}

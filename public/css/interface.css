@@ -1,0 +1,456 @@
+@import url('./animation.css');
+main > *,
+main * {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* --------------- --------------- ---------------- --------------- --------------- --------------- ---------------  */
+#checkpoint {
+    width: 570px;
+    height: 103px;
+    position: relative;
+}
+#checkpoint-sprite {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------  */
+/* --------------- --------------- ---------------- --------------- --------------- --------------- ---------------  */
+#desk {
+    display: flex;
+    width: 570px;
+    height: 217px;
+    position: relative;
+    overflow: hidden;
+
+}
+#intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 570px;
+    height: 217px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+}
+#intro-text {
+    color: white;
+}
+#intro.out {
+    animation: start 1s ease-out forwards;
+}
+@keyframes start {
+    0% {
+        transform: translateY(0%);
+    }
+    65% {
+        transform: translateY(80%);
+    }
+    30%, 100% {
+        transform: translateY(100%);
+    }
+}
+#desk-facecheck-container {
+    width: 178px;
+    height: 217px;
+    position: relative;
+    overflow: hidden;
+}
+#shutterSwitch {
+    width: 28px;
+    height: 23px;
+    position: absolute;
+    top: 4px;
+    right: 0px; 
+    z-index: 6;
+    overflow: hidden;
+}
+#shutter {
+    width: 180px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transform: translateY(0px);
+    transition: transform 580ms;
+}
+#control-center {
+    width: 570px;
+    height: 217px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 6;
+}
+#boothWall {
+    width: 178px;
+    height: 135px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+#console-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+#console {
+    position: relative;
+}
+#papers.dragbox {
+    width: 178px;
+    height: 145px;
+    border: solid 1px red;
+    position: absolute;
+    bottom: 46px;
+    left: 0px;
+    z-index: 6;
+}
+#papers.dragbox > #drop-zone {
+    width: 178px;
+    height: 48px;
+    border: solid 1px blue;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 7;
+}
+#console-sprite {
+    width: 178px;
+    height: 51px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 7;
+}
+#bulletinWrapper {
+    width: 21px;
+    height: 38px;
+    position: absolute;
+    bottom: 9px;
+    left:42px;
+    z-index: 7;
+}
+#audio-log {
+    width: 37px;
+    height: 46px;
+    position: absolute;
+    bottom: 0px;
+    left: 71px;
+    z-index: 6;
+}
+#transcript-hitbox {
+    width: 29px;
+    height: 30px;
+    position: absolute;
+    bottom: 21px;
+    left: 75px;
+    z-index: 7;
+}
+#consoleBolt {
+    position: absolute;
+    left: 85px;
+    bottom: 12px;
+    z-index: 7;
+    animation: speak 680ms infinite steps(3);
+}
+@keyframes speak {
+    0%, 100% {
+        visibility: visible;
+    }
+    50% {
+        visibility: hidden;
+    }
+}
+#ruleBookWrapper {
+    width: 26px;
+    height: 34px;
+    position: absolute;
+    bottom: 9px;
+    left: 114px;
+    z-index: 7;
+}
+#bulletinCotaniner, #ruleBookContainer {
+    width: inherit;
+    height: inherit;
+    position: relative;
+}
+#desk-documents-container {
+    flex: 1;
+    margin-left: 2px;
+    position: relative;
+    overflow: hidden;
+}
+#stamp {
+    width: 280px;
+    height: 83px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    z-index: 9999;
+    transform: translateX(270px);
+}
+#stamp.beingOpen {
+    animation: stampBarOpen 820ms forwards ease-out;
+}
+#stamp.beingClose {
+    animation: stampBarClose 760ms forwards ease-out;
+}
+
+#stamp > #oppen {
+    height: 57px;
+    width: 10px;
+    position: absolute;
+    left: 0;
+    top: 6px;
+    z-index: 8;
+}
+#stamp > #stampBarTop {
+    width: inherit;
+    height: 47px;
+    position: relative;
+    z-index: 5;
+}
+#stamp > #stampBarMid {
+    width: inherit;
+    height: 16px;
+    position: relative;
+    z-index: 7;
+}
+#stamp > #stampBarBot {
+    width: inherit;
+    height: 20px;
+    position: relative;
+    z-index: 7;
+}
+#stamp .stamp {
+    /* width: 75px;
+    height: 65px; */
+    position: absolute;
+    z-index: 6;
+}
+#stamp .stamp > .sprite {
+    width: inherit;
+    height: inherit;
+    position: relative;
+}
+#stamp .stamp#deniedStamp {
+    left: 40px;
+}
+#stamp .stamp#aprovedStamp {
+    left: 160px;   
+}
+
+#stamp .stamp > .sprite > .stampTop {
+    width: 27px;
+    height: 34px;
+    position: absolute;
+    top: -22px;
+    left: 24px;
+    z-index: 7;
+}
+#stamp .stamp > .sprite > #stampBotDenied,
+#stamp .stamp > .sprite > #stampBotAproved {
+    width: 75px;
+    height: 65px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+}
+.stamp.stamping {
+    animation: stamp 190ms linear forwards;
+    /* transform: translateY(18px) !important; */
+}
+.stamp.stamping > .sprite > .stampTop {
+    animation: topStamp 190ms 12ms linear forwards;
+    /* transform: translateY(12px) !important; */
+}
+.stamp.back-up  {
+    transform: translateY(18px);
+    animation: stampBack 190ms linear forwards;
+}
+.stamp.back-up > .sprite > .stampTop {
+    transform: translateY(12px);
+    animation: topStampBack 190ms 8ms linear forwards;
+}
+
+@keyframes topStamp {
+    from {
+        transform: translateY(0px);
+    } 
+    to {
+        transform: translateY(12px);
+    }
+}
+@keyframes topStampBack {
+    from {
+        transform: translateY(12px);
+    } 
+    to {
+        transform: translateY(0px);
+    }
+}
+@keyframes stamp {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(18px);
+    }
+}
+@keyframes stampBack {
+    from {
+        transform: translateY(18px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+#inspectButton {
+    height: 24px;
+    width: 32px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 9999;
+    display: none;
+}
+
+#outerBooth {
+    width: 56px; 
+    height: 38px; 
+    position: relative;
+    top: 65px;
+    left: 146px;
+    overflow: hidden;
+}
+#outerBooth > img {
+    position: absolute;
+    left: 0px; 
+    top: 0px;
+    z-index: 6;
+}
+#outerBooth > .hitbox {
+    height: 21px;
+    width: 25px;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    z-index: 7;
+}
+#outerBooth > div.pop-up {
+    display: none;
+    position: relative;
+    font-size: 14px;
+    z-index: 8;
+}
+
+#bulletinInnerWrapper {
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    top: 2px;
+    left: 118px;
+    z-index: 7;
+}
+#bulletinInner {
+    height: inherit;
+    width: inherit;
+    position: relative;
+}
+#bulletinPrev, #bulletinNext {
+    position: absolute;
+    bottom: 0;
+    z-index: 8;
+}
+#bulletinPrev {
+    left: 0;
+}
+#bulletinNext {
+    right: 0;
+}
+
+#rulesInnerWrapper {
+    width: 246px;
+    height: 160px;
+    position: absolute;
+    top: 4px;
+    left: -50px;
+    z-index: 8;
+}
+#rulesInner {
+    height: inherit;
+    width: inherit;
+    position: relative;
+}
+#rulesPrev, #rulesNext, #rulesHome {
+    position: absolute;
+    z-index: 8;
+}
+#rulesHome {
+    top: 0px;
+}
+#rulesInner:not(.home) > #rulesHome {
+    left: 11px;
+}
+#rulesHome {
+    right: 18px;
+}
+#rulesPrev, #rulesNext {
+    bottom: 2px;
+}
+#rulesInner.home > #rulesPrev {
+    display: none;
+}
+#rulesPrev {
+    left: 10px;
+}
+#rulesNext {
+    right: 10px;
+}
+
+/* ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------  */
+
+.passport 
+
+.speech-bubble {
+
+    width: 120px;
+    height: 20px; 
+    background-image: url('../../assets/others/SpeechBubble.png');
+    border: solid transparent; /* Set the width of the border */
+    border-width: 2px 2px;
+    background-color: transparent; /* Make the center transparent */
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.speech-bubble::before,
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-image: url('../../assets/others/SpeechBubble.png'); /* Image containing the center part */
+    background-size: cover;
+}
+.speech-bubble::before {
+    left: 0;
+    border-left: 2px solid transparent; /* Left border */
+    border-right: 2px solid black; /* Right border */
+}
+
+.speech-bubble::after {
+    right: 0;
+    border-left: 2px solid black; /* Left border */
+    border-right: 2px solid transparent; /* Right border */
+}
+

@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 04b03;
+    src: url('../../font/04B_03__.TTF');
+}
+/* The daily bulletin, audio transcripts, the counterfeiter flyer, the temporary visa slip, and titles in end credits */
+
+@font-face {
+    font-family: 53Veda;
+    src: url('../../font/53Veda.TTF');
+}
+/* Abbreviations DOB., ISS., and EXP., and the word SEX on passports */
+
+@font-face {
+    font-family:AtariSmall;
+    src: url('../../font/AtariSmall.ttf');
+}
+/* Speech bubbles, work passes, certificates of vaccination, small headings in the the rulebook, dates on stamps */
+
+@font-face {
+    font-family: bangalor;
+    src: url('../../font/Bangalor.ttf');
+}
+/* ? */
+
+@font-face {
+    font-family: BM Germar;
+    src: url('../../font/BMgermar.TTF');
+}
+@font-face {
+    font-family: BM Mini;
+    src: url('../../font/BMmini.TTF');
+}
+
+@font-face {
+    font-family: chixa Demibold;
+    src: url('../../font/ChixaDemiBold.ttf');
+}
+
+@font-face {
+    font-family: Motorola Screentype;
+    src: url('../../font/MotorolaScreentype.ttf');
+}
+/* 	Article headings in The Truth of Arstotzka, and the counterfeiter flyer and the Get Big Town ad since version 1.1.60 */
+
+@font-face {
+    font-family: pixelplay;
+    src: url('../../font/PixelPlay.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Main menu, cutscenes, end-of-day screen, plaques, end credits, headings of diplomatic authorizations, grants of asylym, entry permits,
+access permits, entry tickets, the wanted list, headings of instructions at the back of the official bulletin, and since version 1.1.60,
+commands such as sleep, back, and next */
+
+
+
+
+
+
+
+
+

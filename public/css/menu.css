@@ -1,0 +1,149 @@
+
+#Menu {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #556955;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translateY(320px);
+    transition: transform 350ms;
+}
+#transitionBoard {
+    width: inherit;
+    height: inherit;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #556955;
+    position: absolute;
+    top:0;
+    left: 0;
+    pointer-events: none;
+    opacity: 1; /* switch to 0 for deve purposes*/
+    transition: opacity 1s;
+    z-index: 9999;
+}
+#Menu:not(.onboot) ~ #transitionBoard {
+    opacity: 0;
+}
+#transitionBoard.blackOut {
+    opacity: 1 !important;
+}
+#Title {
+    width: 315px;
+    height: 197px;
+    margin-top: 16px;
+    transform: translateY(0%);
+
+}
+#Title.on {
+    animation: bounce 3s infinite;
+}
+@keyframes bounce {
+    0%, 25%, 100% {
+        transform: translateY(0px);
+    }
+    50%, 75% {
+        transform: translateY(4px);
+    }
+}
+#option {
+    width: 129px;
+    flex: 1;
+    margin-top: 8px;
+    position: relative;
+}
+.game-modes {
+    width: 129px;
+    height: 19px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+img.menu-button {
+    object-fit: cover;
+    object-position: 0 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.game-modes.clicked > .menu-button {
+    object-position: 0 -19px;
+}
+.game-modes > span {
+    height: 14px;
+    margin: 0px !important;
+    padding: 0px !important;
+    font-size: 14px;
+    z-index: 5;
+}
+.game-modes.clicked > span {
+    color:black;
+}
+#ref, #version {
+    font-size: 10px;
+}
+#ref {
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 12px;
+}
+#version {
+    position: absolute;
+    bottom: 0px;
+    right: 0px
+}
+#QuitButton > img,
+#SettingsButton > img {
+    object-fit: cover;
+    object-position: 0 0;  
+    transition: object-position 0s;
+    z-index: 4;
+}
+#Menu.onboot > #QuitButton, 
+#Menu.intro > #QuitButton {
+    display: none; /* swith to block for dev purposes*/
+}
+#QuitButton {
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    overflow: hidden;
+}
+#QuitButton > img {
+    width: 17px;  
+    height: 34px;  
+}
+#QuitButton > img.clicked {
+    object-position: 0 -17px;  /* Move to the second part of the image on hover */
+}
+#SettingsButton {
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+#SettingsButton > img {
+    width: 29px;  
+    height: 58px;  
+}
+#SettingsButton > img.clicked {
+    object-position: 0 -29px;  /* Move to the second part of the image on hover */
+}
+
+

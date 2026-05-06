@@ -1,0 +1,55 @@
+section#plays {
+    display: flex;
+    flex-direction: column;
+}
+#header, #footer {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#header {
+    border-bottom: 2px solid white;
+    color: white;
+    
+}
+#footer {
+    border-top: 2px solid white;
+}
+#plays-body {
+    flex: 1;
+}
+.save {
+    height: fit-content;
+    width: fit-content;
+}
+.save-day {
+    color: #5D6060;
+    
+}
+.new-game {
+    width: 59px;
+    height: 29px;
+    overflow: hidden;
+}
+.new-game > img {
+    object-fit: cover;
+    object-position: 0 0px;
+}
+
+
+
+#delete {
+    width: 29px;
+    height: 25px;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    top: 7.5px;
+}
+#delete > img {
+    object-fit: cover;
+    object-position: 0 0px;
+}

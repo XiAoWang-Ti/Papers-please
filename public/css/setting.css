@@ -1,0 +1,103 @@
+#settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#setting-header-wrapper {
+    width: 570px;
+    height: 54px;
+}
+#webpage-link, #X-link {
+    z-index: 6;
+}
+#webpage-link {
+    width: 88px;
+    height: 11px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+#webpage-link > img {
+    object-fit: cover;
+    object-position: 0 0px;
+}
+#X-link {
+    width: 50px;
+    height: 11px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+#X-link > img {
+    object-fit: cover;
+    object-position: 0 0px;
+}
+#webpage-link:hover > img, #X-link:hover > img {
+    object-position: 0 -11px;
+}
+#setting-header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#setting-header > img {
+    position: absolute;
+    top:0px;
+    left: 0px;
+    z-index: 5;
+}
+#setting-header > span {
+    padding: 0px 12px;
+    color: white;
+    font-size: large;
+    background-color: black;
+    z-index: 6;
+    transform: translateY(41px);
+}
+#setting-options {
+    padding: 12px;
+    width: 220px;
+    color: white;
+}
+.setting-option {
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+.type-select {
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    transform: translateX(-20px);
+}
+.type-select > img {
+    object-fit: cover;
+    object-position: 0 0px;
+}
+.type-text, .type-audio {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.audio-bar {
+    width: 50px;
+    height: 13px;
+    background-image: url('../../assets/others/SettingsBar.png');
+}
+.audio-bar > img {
+    object-fit: cover;
+    object-position: 0 -13px;
+}
+.minus-plus {
+    height: 15px;
+    overflow: hidden;
+}
+.minus-plus > img {
+    object-fit: cover;
+    object-position: 0 0px;
+}
